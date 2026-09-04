@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f7f1;
+  --foreground: #0f2213;
+
+  /* Forest green — primary brand scale, anchored on the logo green at 800.
+     #0b450b is sampled directly from the Rooster wordmark artwork. */
+  --color-forest-50: #eef7ef;
+  --color-forest-100: #d5ecd8;
+  --color-forest-200: #a9d6ae;
+  --color-forest-300: #75bb7e;
+  --color-forest-400: #439e50;
+  --color-forest-500: #22822f;
+  --color-forest-600: #166a1e;
+  --color-forest-700: #105515;
+  --color-forest-800: #0b450b;
+  --color-forest-900: #073309;
+  --color-forest-950: #041f06;
+
+  /* Sun — accent. A rooster calls the sunrise; the warm amber also gives the
+     deep logo green a high-contrast partner for CTAs and emergency callouts. */
+  --color-sun-50: #fff9e9;
+  --color-sun-100: #ffefc4;
+  --color-sun-200: #ffdf8a;
+  --color-sun-300: #ffcb4d;
+  --color-sun-400: #fdb725;
+  --color-sun-500: #eb9d09;
+  --color-sun-600: #c17806;
+  --color-sun-700: #94590a;
+
+  /* Warm off-white / stone neutrals */
+  --color-cream-50: #fffefb;
+  --color-cream-100: #f8f7f1;
+  --color-cream-200: #f0eee3;
+  --color-cream-300: #e3dfcd;
+  --color-cream-400: #cec8ae;
+
+  --color-ink-900: #0a1a0c;
+  --color-ink-800: #122515;
+  --color-ink-700: #1e3421;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-forest-50: var(--color-forest-50);
+  --color-forest-100: var(--color-forest-100);
+  --color-forest-200: var(--color-forest-200);
+  --color-forest-300: var(--color-forest-300);
+  --color-forest-400: var(--color-forest-400);
+  --color-forest-500: var(--color-forest-500);
+  --color-forest-600: var(--color-forest-600);
+  --color-forest-700: var(--color-forest-700);
+  --color-forest-800: var(--color-forest-800);
+  --color-forest-900: var(--color-forest-900);
+  --color-forest-950: var(--color-forest-950);
+
+  --color-sun-50: var(--color-sun-50);
+  --color-sun-100: var(--color-sun-100);
+  --color-sun-200: var(--color-sun-200);
+  --color-sun-300: var(--color-sun-300);
+  --color-sun-400: var(--color-sun-400);
+  --color-sun-500: var(--color-sun-500);
+  --color-sun-600: var(--color-sun-600);
+  --color-sun-700: var(--color-sun-700);
+
+  --color-cream-50: var(--color-cream-50);
+  --color-cream-100: var(--color-cream-100);
+  --color-cream-200: var(--color-cream-200);
+  --color-cream-300: var(--color-cream-300);
+  --color-cream-400: var(--color-cream-400);
+
+  --color-ink-900: var(--color-ink-900);
+  --color-ink-800: var(--color-ink-800);
+  --color-ink-700: var(--color-ink-700);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+body {
+  background: var(--color-cream-100);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  /* Belt-and-braces against a stray wide child causing sideways scroll. */
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-sun-300);
+  color: var(--color-ink-900);
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Reduced motion: kill decorative motion, keep instant state changes */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Anchor links land below the fixed header instead of under it. */
+  scroll-padding-top: 5rem;
+}
+
+/* subtle grain/texture overlay used on dark sections */
+.bg-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
