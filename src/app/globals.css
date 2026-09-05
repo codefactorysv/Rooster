@@ -160,3 +160,93 @@ html {
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+/* ---------------------------------------------------------------------------
+   Article body typography.
+
+   Built from the theme tokens rather than pulling in a typography plugin, so
+   blog posts inherit exactly the same colours, fonts and rhythm as the rest of
+   the site. Applied to the container that holds rendered Markdown.
+   --------------------------------------------------------------------------- */
+.prose-rooster {
+  color: var(--color-ink-700);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.prose-rooster > * + * {
+  margin-top: 1.25em;
+}
+
+.prose-rooster h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-ink-900);
+  margin-top: 2.25em;
+  margin-bottom: 0.15em;
+  scroll-margin-top: 6rem;
+}
+
+.prose-rooster h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-ink-900);
+  margin-top: 1.9em;
+  margin-bottom: 0.1em;
+  scroll-margin-top: 6rem;
+}
+
+.prose-rooster strong {
+  color: var(--color-ink-900);
+  font-weight: 650;
+}
+
+.prose-rooster a {
+  color: var(--color-forest-700);
+  font-weight: 550;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease;
+}
+.prose-rooster a:hover {
+  color: var(--color-forest-500);
+}
+
+.prose-rooster ul,
+.prose-rooster ol {
+  padding-left: 1.35em;
+}
+.prose-rooster ul {
+  list-style: disc;
+}
+.prose-rooster ol {
+  list-style: decimal;
+}
+.prose-rooster li::marker {
+  color: var(--color-forest-500);
+}
+.prose-rooster li + li {
+  margin-top: 0.45em;
+}
+
+.prose-rooster blockquote {
+  border-left: 3px solid var(--color-sun-400);
+  padding-left: 1.1em;
+  font-style: italic;
+  color: var(--color-ink-800);
+}
+
+.prose-rooster hr {
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-forest-900) 12%, transparent);
+  margin-block: 2.5em;
+}
+
+.prose-rooster img {
+  border-radius: 1rem;
+}

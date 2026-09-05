@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { siteConfig } from "@/lib/content";
 import { Icon } from "@/components/Icon";
 
@@ -31,14 +32,14 @@ export function MobileCTA() {
         <Icon name="phone" className="size-4" />
         Call Now
       </a>
-      <a
-        href="#contact"
+      <Link
+        href="/#contact"
         tabIndex={visible ? undefined : -1}
         className="flex items-center justify-center gap-2 bg-sun-400 py-4 text-sm font-bold uppercase tracking-wide text-ink-900 active:bg-sun-300"
       >
         <Icon name="estimate" className="size-4" />
         Free Estimate
-      </a>
+      </Link>
     </div>
   );
 }

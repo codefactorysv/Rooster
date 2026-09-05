@@ -58,7 +58,7 @@ export function Services() {
                   </h3>
                   <p className="max-w-md text-sm text-cream-100/85">{service.description}</p>
                   <Link
-                    href="#contact"
+                    href="/#contact"
                     className="mt-1 inline-flex w-fit items-center gap-1 text-sm font-bold text-sun-300 transition-colors hover:text-sun-200"
                   >
                     Request Service
@@ -94,7 +94,7 @@ export function Services() {
                 </a>
               ) : (
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="group flex h-full flex-col gap-3 rounded-2xl border border-forest-900/10 bg-cream-50 p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-forest-300 hover:shadow-lg"
                 >
                   <div className="flex size-9 items-center justify-center rounded-full bg-forest-50 text-forest-700 transition-colors group-hover:bg-sun-400 group-hover:text-ink-900">

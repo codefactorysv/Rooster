@@ -33,12 +33,16 @@ export const siteConfig = {
   ogImage: "/images/og-rooster-tree-lawn-services.jpg",
 } as const;
 
+// Hrefs are root-relative, not bare fragments, so the same nav works from the
+// blog routes as well as the home page. From "/" the browser still resolves
+// them to an in-page anchor and `scroll-behavior: smooth` applies.
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Our Work", href: "#our-work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services" },
+  { label: "Our Work", href: "/#our-work" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export type ServiceGroup = "Tree Care" | "Lawn & Landscaping" | "Additional Services";

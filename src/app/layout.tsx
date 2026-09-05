@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
-import Script from "next/script";
-import { serviceOptions, siteConfig } from "@/lib/content";
+import { siteConfig } from "@/lib/content";
 import "./globals.css";
 
 const inter = Inter({
@@ -81,68 +80,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Only facts confirmed by the owner appear here. No postal address, service
-// area, rating, review count, price or founding date is asserted — add
-// `address`, `areaServed` and `aggregateRating` once those are confirmed.
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: siteConfig.name,
-  description,
-  telephone: `+1-${siteConfig.phone}`,
-  url: siteConfig.url,
-  image: `${siteConfig.url}${siteConfig.ogImage}`,
-  logo: `${siteConfig.url}/images/logo/rooster-logo.png`,
-  knowsLanguage: ["en", "es"],
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "07:00",
-      closes: "19:00",
-    },
-  ],
-  // 24/7 availability is scoped to tree emergencies, not the whole business.
-  availableChannel: {
-    "@type": "ServiceChannel",
-    name: siteConfig.emergencyLabel,
-    servicePhone: {
-      "@type": "ContactPoint",
-      telephone: `+1-${siteConfig.phone}`,
-      contactType: "emergency",
-      availableLanguage: ["en", "es"],
-      hoursAvailable: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "00:00",
-        closes: "23:59",
-      },
-    },
-  },
-  makesOffer: serviceOptions
-    .filter((name) => name !== "Other")
-    .map((name) => ({
-      "@type": "Offer",
-      itemOffered: { "@type": "Service", name },
-    })),
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -153,12 +90,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-cream-100 text-ink-900">
         {children}
-        <Script
-          id="local-business-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
       </body>
     </html>
   );

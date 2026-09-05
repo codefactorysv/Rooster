@@ -37,7 +37,7 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8">
-        <Link href="#home" aria-label={`${siteConfig.name} — home`} className="shrink-0">
+        <Link href="/#home" aria-label={`${siteConfig.name} — home`} className="shrink-0">
           <Logo
             className="h-10 w-auto transition-colors sm:h-12"
             wordClassName={solid ? "fill-forest-800" : "fill-cream-50"}
@@ -73,7 +73,7 @@ export function Navbar() {
             {siteConfig.phoneDisplay}
           </a>
           <Link
-            href="#contact"
+            href="/#contact"
             className="rounded-full bg-sun-400 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-ink-900 shadow-md shadow-sun-700/20 transition-all hover:-translate-y-0.5 hover:bg-sun-300 hover:shadow-lg"
           >
             Free Estimate
@@ -129,7 +129,7 @@ export function Navbar() {
               ))}
             </ul>
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-4 block rounded-full bg-sun-400 px-5 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-ink-900 shadow-md"
             >

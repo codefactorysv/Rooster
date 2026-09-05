@@ -45,13 +45,13 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-2.5 text-sm">
               {footerServices.map((service) => (
                 <li key={service.slug}>
-                  <Link href="#services" className="transition-colors hover:text-sun-300">
+                  <Link href="/#services" className="transition-colors hover:text-sun-300">
                     {service.title}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="#emergency" className="transition-colors hover:text-sun-300">
+                <Link href="/#emergency" className="transition-colors hover:text-sun-300">
                   Emergency Tree Service
                 </Link>
               </li>
@@ -82,7 +82,7 @@ export function Footer() {
               </li>
             </ul>
             <Link
-              href="#contact"
+              href="/#contact"
               className="mt-5 inline-flex items-center justify-center rounded-full bg-sun-400 px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-ink-900 transition-transform hover:-translate-y-0.5"
             >
               Free Estimate

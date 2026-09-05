@@ -6,10 +6,13 @@ import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { EmergencyBanner } from "@/components/EmergencyBanner";
 import { Gallery } from "@/components/Gallery";
 import { FeaturedBanner } from "@/components/FeaturedBanner";
+import { LatestPosts } from "@/components/LatestPosts";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { MobileCTA } from "@/components/MobileCTA";
+import { JsonLd } from "@/components/JsonLd";
+import { homeSchema } from "@/lib/schema";
 
 export default function Home() {
   return (
@@ -23,11 +26,13 @@ export default function Home() {
         <EmergencyBanner />
         <Gallery />
         <FeaturedBanner />
+        <LatestPosts />
         <About />
         <Contact />
       </main>
       <Footer />
       <MobileCTA />
+      <JsonLd id="home-schema" data={homeSchema()} />
     </>
   );
 }
