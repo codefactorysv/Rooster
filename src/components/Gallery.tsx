@@ -9,9 +9,9 @@ import { Lightbox } from "@/components/Lightbox";
 
 const categories: Array<GalleryCategory | "All"> = [
   "All",
-  "Tree & Stump Work",
-  "Lawn & Sod",
-  "Mulch & Flower Beds",
+  "Lawn and sod",
+  "Mulch and flower beds",
+  "Tree and stump",
 ];
 
 export function Gallery() {

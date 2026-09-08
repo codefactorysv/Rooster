@@ -247,7 +247,7 @@ export const trustPoints = [
   },
 ];
 
-export type GalleryCategory = "Tree & Stump Work" | "Lawn & Sod" | "Mulch & Flower Beds";
+export type GalleryCategory = "Lawn and sod" | "Mulch and flower beds" | "Tree and stump";
 
 export type GalleryItem = {
   id: string;
@@ -263,84 +263,84 @@ export const galleryItems: GalleryItem[] = [
     id: "tree-crew-trailer",
     src: "/images/real/large-tree-service-dump-trailer.jpg",
     alt: "Dump trailer parked beneath a large pecan tree at a residential tree service job",
-    category: "Tree & Stump Work",
+    category: "Tree and stump",
     caption: "Geared up for a large tree over the house",
   },
   {
     id: "hazard-tree-before",
     src: "/images/real/hazard-tree-before-removal.jpg",
     alt: "Leaning tree with a split, hollowed trunk standing close to a brick house before removal",
-    category: "Tree & Stump Work",
+    category: "Tree and stump",
     caption: "Split, hollow trunk leaning over the driveway",
   },
   {
     id: "cut-to-stump",
     src: "/images/real/tree-cut-down-to-stump.jpg",
     alt: "Decayed tree trunk cut down to a low stump inside a brick garden ring",
-    category: "Tree & Stump Work",
+    category: "Tree and stump",
     caption: "Taken down in sections, right to the stump",
   },
   {
     id: "stump-removed",
     src: "/images/real/stump-removed-yard-restored.jpg",
     alt: "Front yard with the tree and stump fully removed and the ground raked level",
-    category: "Tree & Stump Work",
+    category: "Tree and stump",
     caption: "Stump ground out and the yard left level",
   },
   {
     id: "stump-grinding-close",
     src: "/images/real/stump-grinding-yard-cleared.jpg",
     alt: "Ground stump mulch spread level where a tree used to stand in a front yard",
-    category: "Tree & Stump Work",
+    category: "Tree and stump",
     caption: "Nothing left to trip over or mow around",
   },
   {
     id: "lawn-stripes",
     src: "/images/real/backyard-lawn-mowing-stripes.jpg",
     alt: "Large backyard mowed in clean alternating stripes behind a single-story home",
-    category: "Lawn & Sod",
+    category: "Lawn and sod",
     caption: "Full backyard cut in clean stripes",
   },
   {
     id: "sod-front-lawn",
     src: "/images/real/sod-installation-green-lawn.jpg",
     alt: "Thick green front lawn covering the full yard after sod installation",
-    category: "Lawn & Sod",
+    category: "Lawn and sod",
     caption: "Bare ground to a full green lawn",
   },
   {
     id: "lawn-front-yard",
     src: "/images/real/lawn-service-manicured-front-yard.jpg",
     alt: "Freshly mowed and edged front lawn with a crisp line along the driveway",
-    category: "Lawn & Sod",
+    category: "Lawn and sod",
     caption: "Mowed, edged, and cleaned up",
   },
   {
     id: "property-cleanup",
     src: "/images/real/property-cleanup-front-yard.jpg",
     alt: "Tidy front yard and driveway after a property clean-up",
-    category: "Lawn & Sod",
+    category: "Lawn and sod",
     caption: "Whole-property clean-up, front to curb",
   },
   {
     id: "oak-mulch-beds",
     src: "/images/real/front-yard-oak-fresh-mulch-beds.jpg",
     alt: "Front yard with a large live oak and freshly mulched, freshly edged tree beds",
-    category: "Mulch & Flower Beds",
+    category: "Mulch and flower beds",
     caption: "New mulch beds cut in under the oaks",
   },
   {
     id: "mulch-rings",
     src: "/images/real/mulching-tree-rings-front-yard.jpg",
     alt: "Two freshly mulched tree rings with clean edges cut into a front lawn",
-    category: "Mulch & Flower Beds",
+    category: "Mulch and flower beds",
     caption: "Fresh mulch, crisp edges",
   },
   {
     id: "flower-bed-boxwoods",
     src: "/images/real/flower-bed-shrubs-black-mulch.jpg",
     alt: "Curved flower bed with shaped boxwoods, black mulch, edging and stepping stones",
-    category: "Mulch & Flower Beds",
+    category: "Mulch and flower beds",
     caption: "Shaped shrubs, black mulch, clean edge",
   },
 ];
