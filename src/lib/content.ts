@@ -260,7 +260,95 @@ export type GalleryItem = {
 // Exclusively real photographs of the owner's own jobs. No stock imagery.
 // Files live in /public/images/real/. Removing an entry here only removes it
 // from the gallery — the same photo may still be used by another section.
-export const galleryItems: GalleryItem[] = [];
+export const galleryItems: GalleryItem[] = [
+  // --- Lawn and sod ---------------------------------------------------------
+  {
+    id: "new-build-fresh-sod",
+    src: "/images/real/new-build-front-yard-fresh-sod.jpg",
+    alt: "New single-story white home with a freshly sodded front lawn and a wide concrete driveway",
+    category: "Lawn and sod",
+    caption: "Fresh sod on a new-build lot, curb to driveway",
+  },
+  {
+    id: "graded-lot-before-sod",
+    src: "/images/real/graded-lot-before-sod-installation.jpg",
+    alt: "Bare, freshly graded dirt lot beside a new home, prepared before sod is laid",
+    category: "Lawn and sod",
+    caption: "Lot graded and prepped before the sod goes down",
+  },
+  {
+    id: "sod-rolls-being-laid",
+    src: "/images/real/sod-rolls-being-laid-new-lawn.jpg",
+    alt: "Rolls of sod being laid across a sandy side yard next to a new white house",
+    category: "Lawn and sod",
+    caption: "Sod rolls going down on a new side yard",
+  },
+  {
+    id: "sod-front-lawn",
+    src: "/images/real/sod-installation-green-lawn.jpg",
+    alt: "Thick green front lawn covering the full yard after sod installation",
+    category: "Lawn and sod",
+    caption: "Bare ground to a full green lawn",
+  },
+  {
+    id: "mowed-lawn-trimmed-hedges",
+    src: "/images/real/mowed-front-lawn-trimmed-hedges.jpg",
+    alt: "Freshly mowed front lawn with crisp sidewalk edges and trimmed hedges along a ranch home",
+    category: "Lawn and sod",
+    caption: "Mowed, edged, hedges shaped",
+  },
+  {
+    id: "corner-lot-lawn-oak",
+    src: "/images/real/corner-lot-lawn-oak-and-garden-beds.jpg",
+    alt: "Corner lot with a freshly cut lawn under a large oak, a brick driveway and mulched garden beds",
+    category: "Lawn and sod",
+    caption: "Corner lot cut clean around a mature oak",
+  },
+  // --- Mulch and flower beds -------------------------------------------------
+  {
+    id: "front-entry-beds-black-mulch",
+    src: "/images/real/front-entry-flower-beds-black-mulch.jpg",
+    alt: "Front entry beds with black mulch, boxwoods, purple loropetalum, gazanias and stone edging along a flagstone path",
+    category: "Mulch and flower beds",
+    caption: "Entry beds mulched, edged and planted",
+  },
+  {
+    id: "modern-home-mulch-bed",
+    src: "/images/real/modern-home-mulch-bed-boxwoods-steel-edging.jpg",
+    alt: "Bed of black mulch with clipped boxwood spheres and steel edging beside a dark brick modern home",
+    category: "Mulch and flower beds",
+    caption: "Black mulch, boxwood spheres, steel edge",
+  },
+  {
+    id: "poolside-bed-mulch",
+    src: "/images/real/poolside-planting-bed-fresh-mulch.jpg",
+    alt: "Freshly mulched planting bed with roses along a backyard pool wall and covered patio",
+    category: "Mulch and flower beds",
+    caption: "Poolside bed refreshed with new mulch",
+  },
+  {
+    id: "oak-mulch-beds",
+    src: "/images/real/front-yard-oak-fresh-mulch-beds.jpg",
+    alt: "Front yard with a large live oak and freshly mulched, freshly edged tree beds",
+    category: "Mulch and flower beds",
+    caption: "New mulch beds cut in under the oaks",
+  },
+  // --- Tree and stump --------------------------------------------------------
+  {
+    id: "climber-trimming-tree",
+    src: "/images/real/climber-trimming-large-tree-over-house.jpg",
+    alt: "Crew member in a harness climbing a large tree that leans over a house, ropes staged on the lawn below",
+    category: "Tree and stump",
+    caption: "Roped in and trimming a large tree over the roof",
+  },
+  {
+    id: "stump-grinding-wood-chips",
+    src: "/images/real/stump-grinding-wood-chips-front-yard.jpg",
+    alt: "Mound of fresh wood chips from stump grinding in a front yard beside a covered patio",
+    category: "Tree and stump",
+    caption: "Stump ground down to chips, ready to level",
+  },
+];
 
 export type StoryItem = {
   title: string;
