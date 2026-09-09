@@ -57,7 +57,7 @@ Copy `.env.example` to `.env.local`. Never commit a real `.env` file.
 | `RESEND_API_KEY`       | Yes, in production  | Sends Free Estimate submissions. Create at https://resend.com/api-keys.    |
 | `CONTACT_TO_EMAIL`     | Yes, in production  | Inbox that receives estimate requests. **No default — must be set.**       |
 | `CONTACT_FROM_EMAIL`   | No                  | "From" address. Defaults to `onboarding@resend.dev`.                       |
-| `NEXT_PUBLIC_SITE_URL` | Recommended         | Canonical/OG/sitemap base URL. Defaults to `https://roostertreelawn.com`.  |
+| `NEXT_PUBLIC_SITE_URL` | Recommended         | Canonical/OG/sitemap base URL. Defaults to `https://roosterserviceshtx.com`.  |
 
 In development, if `RESEND_API_KEY` or `CONTACT_TO_EMAIL` is missing the form
 still works end to end and the submission is logged to the server console. In

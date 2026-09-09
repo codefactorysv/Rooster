@@ -29,7 +29,7 @@ export const siteConfig = {
   // the phone number only. Set `email` once an address is confirmed and the
   // contact card will appear automatically.
   email: "" as string,
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://roostertreelawn.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://roosterserviceshtx.com",
   ogImage: "/images/og-rooster-tree-lawn-services.jpg",
 } as const;
 
